@@ -34,7 +34,6 @@ async function getAccessToken(): Promise<string | undefined> {
 			grant_type: 'refresh_token',
 			refresh_token: process.env.SPOTIFY_REFRESH_TOKEN as string,
 		}),
-		cache: 'no-store',
 	});
 	const data = await res.json();
 
@@ -61,7 +60,6 @@ export async function getTopTracks(): Promise<TrackProps[]> {
 		headers: {
 			Authorization: `Bearer ${token}`,
 		},
-		cache: 'no-store',
 	});
 
 	if (!res.ok) {
