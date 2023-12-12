@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import type { ReactNode } from 'react';
 import { useNavbar } from '../../hooks/use-navbar';
-import { Annotation } from '../../icons/Annotation';
 import { UserCircle } from '../../icons/UserCircle';
 import { TooltipContent, TooltipRoot, TooltipTrigger } from '../Tooltip';
 
