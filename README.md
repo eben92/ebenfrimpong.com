@@ -12,7 +12,7 @@
 1. [Clone](https://help.github.com/en/articles/cloning-a-repository) this repository:
 
    ```bash
-   $ git clone https://github.com/rhutmann/eben.com.git
+   $ git clone https://github.com/rhutmann/ebenfrimpong.com.git
    ```
 
 2. Install dependencies:
@@ -34,4 +34,5 @@
 ## Deployment
 
 This project is deployed on [Vercel](https://vercel.com).
+
 # ebenfrimpong.com
