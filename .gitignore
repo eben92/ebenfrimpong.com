@@ -1,0 +1,11 @@
+node_modules
+.next
+.DS_Store
+.contentlayer
+.vscode
+
+.env*.local
+.pnpm-debug.log*
+*.tsbuildinfo
+robots.txt
+sitemap*.xml
