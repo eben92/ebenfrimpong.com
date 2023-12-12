@@ -9,7 +9,7 @@ import { useMdxComponent } from '../../../hooks/use-mdx-component';
 
 export default function Page({ params }: { params: { slug: string } }) {
 	const post = pick(
-		allPosts.find((post) => post.slug === params.slug) as PostType,
+		(allPosts || []).find((post) => post.slug === params.slug) as PostType,
 		['title', 'summary', 'body', 'publishedAtHuman', 'meta'],
 	);
 

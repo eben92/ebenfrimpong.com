@@ -5,7 +5,7 @@ import { generateOpenGraphImage } from '../../../utils/open-graph';
 
 export default function Head({ params }: { params: { slug: string } }) {
 	const post = pick(
-		allPosts.find((post) => post.slug === params.slug) as Post,
+		(allPosts || []).find((post) => post.slug === params.slug) as Post,
 		['title', 'summary', 'publishedAtHuman'],
 	);
 
