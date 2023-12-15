@@ -14,7 +14,7 @@ export function Image(props: ImageProps & { caption?: string }) {
 					{...props}
 					className={clsx(
 						'rounded-lg duration-700 ease-in-out',
-						loading ? 'blur-md grayscale' : 'blur-0 grayscale-0'
+						loading ? 'blur-md grayscale' : 'blur-0 grayscale-0',
 					)}
 					onLoadingComplete={async () => setLoading(false)}
 				/>

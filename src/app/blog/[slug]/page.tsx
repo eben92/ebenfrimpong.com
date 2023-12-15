@@ -13,7 +13,7 @@ export default function Page({ params }: { params: { slug: string } }) {
 		['title', 'summary', 'body', 'publishedAtHuman', 'meta'],
 	);
 
-	const MdxComponent = useMdxComponent(post.body.code);
+	const MdxComponent = useMdxComponent(post?.body?.code);
 
 	return (
 		<>
