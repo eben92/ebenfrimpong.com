@@ -47,17 +47,17 @@ export function NowPlayingExample() {
 
 				<div className="flex gap-1">
 					<a
-						href="https://open.spotify.com/track/6ZsZxNP4Iwdyp3kd5oFFQN"
+						href="https://open.spotify.com/track/0ct6r3EGTcMLPtrXHDvVjc"
 						target="_blank"
 						rel="noreferrer"
 						aria-label="The Grudge"
 					>
-						The Grudge
+						The Nights
 					</a>
 
 					<span className="text-gray-11">·</span>
 
-					<p className="text-gray-11">TOOL</p>
+					<p className="text-gray-11">Avicii</p>
 				</div>
 			</div>
 		</div>

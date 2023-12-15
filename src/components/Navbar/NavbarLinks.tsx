@@ -5,6 +5,7 @@ import type { ReactNode } from 'react';
 import { useNavbar } from '../../hooks/use-navbar';
 import { UserCircle } from '../../icons/UserCircle';
 import { TooltipContent, TooltipRoot, TooltipTrigger } from '../Tooltip';
+import { Annotation } from '~/icons/Annotation';
 
 interface NavbarItemProps {
 	href: string;
@@ -18,11 +19,11 @@ const items: NavbarItemProps[] = [
 		icon: <UserCircle />,
 		label: 'About',
 	},
-	// {
-	// 	href: '/blog',
-	// 	icon: <Annotation />,
-	// 	label: 'Blog',
-	// },
+	{
+		href: '/blog',
+		icon: <Annotation />,
+		label: 'Blog',
+	},
 ];
 
 function NavbarItem({ href, icon, label }: NavbarItemProps) {
