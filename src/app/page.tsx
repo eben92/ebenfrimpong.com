@@ -30,9 +30,9 @@ function Project({
 }
 
 export default function Page() {
-	const projects = allProjects.map((project) =>
-		pick(project, ['title', 'description', 'url', 'year']),
-	);
+	const projects = allProjects
+		.map((project) => pick(project, ['title', 'description', 'url', 'year']))
+		.sort((a, b) => new Date(b?.year).getTime() - new Date(a.year).getTime());
 
 	return (
 		<>
