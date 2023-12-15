@@ -64,7 +64,7 @@ export default function Page() {
 			<h1 className="mb-4 text-4xl font-bold">Blog</h1>
 
 			<p>
-				A space for exploring my mind. Here, I share everything what I know
+				A space for exploring my mind. Here, I share everything that I know
 				about TypeScript, React, serverless technologies, and DevOps practices.
 			</p>
 
