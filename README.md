@@ -12,7 +12,7 @@
 1. [Clone](https://help.github.com/en/articles/cloning-a-repository) this repository:
 
    ```bash
-   $ git clone https://github.com/rhutmann/ebenfrimpong.com.git
+   $ git clone https://github.com/eben96/ebenfrimpong.com.git
    ```
 
 2. Install dependencies:

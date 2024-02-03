@@ -12,7 +12,7 @@ const links: FooterLinkProps[] = [
 	// 	label: 'LinkedIn',
 	// },
 	{
-		href: 'https://github.com/rhutmann',
+		href: 'https://github.com/eben96',
 		label: 'GitHub',
 	},
 	{
