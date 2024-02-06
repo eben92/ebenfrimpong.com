@@ -48,7 +48,7 @@ export default function Page() {
 
 			<p>
 				Below are some of projects I've worked on. You can find most of my work
-				on my <Link href="https://github.com/eben96">GitHub</Link>.
+				on my <Link href="https://github.com/eben92">GitHub</Link>.
 			</p>
 
 			<ul className="-mx-4 mt-8 flex flex-col gap-6 px-1 sm:px-0">
