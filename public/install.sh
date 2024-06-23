@@ -19,8 +19,8 @@ if [ -f /.dockerenv ]; then
 fi
 
 
-http_port=880 # 80
-https_port=8443 # 443
+http_port=80
+https_port=443
 
 # check if something is running on port 80
 if ss -tulnp | grep ":$http_port " >/dev/null; then
