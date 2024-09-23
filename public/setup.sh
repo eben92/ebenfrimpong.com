@@ -2,7 +2,7 @@
 #########################################################
 # This script is intended to be run like this:
 #
-#   curl https://ebenfrimpong.com/setup.sh | sudo bash
+#   curl -s https://ebenfrimpong.com/setup.sh | sudo bash
 #
 #########################################################
 
