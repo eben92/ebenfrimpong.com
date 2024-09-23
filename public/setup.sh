@@ -75,7 +75,7 @@ if [ ! -d "$HOME/theboxoven" ]; then
 	fi
 
 	if [ "$SOURCE" == "" ]; then
-		SOURCE="https://$GITHUB_TOKEN:@github.com/eben92/the-box-oven"
+		SOURCE="https://$GITHUB_TOKEN:@github.com/eben92/theboxoven"
 	fi
 
 	echo "Downloading The-Box-Oven $TAG. . ."
