@@ -50,4 +50,58 @@ if [[ $EUID -ne 0 ]]; then
 	exit 1
 fi
 
-echo "$TAG"
+# Check if token.txt exists
+if [ ! -f token.txt ]; then
+    echo "token.txt not found!"
+    exit 1
+fi
+
+# Read the GitHub access token from the file
+read -r GITHUB_TOKEN < token.txt
+
+# Check if the token is empty
+if [ -z "$GITHUB_TOKEN" ]; then
+    echo "GitHub token is empty!"
+    exit 1
+fi
+
+# Clone the The-Box-Oven repository if it doesn't exist.
+if [ ! -d "$HOME/theboxoven" ]; then
+	if [ ! -f /usr/bin/git ]; then
+		echo "Installing git . . ."
+		apt-get -q -q update
+		DEBIAN_FRONTEND=noninteractive apt-get -q -q install -y git < /dev/null
+		echo
+	fi
+
+	if [ "$SOURCE" == "" ]; then
+		SOURCE="https://$GITHUB_TOKEN:@github.com/eben92/the-box-oven"
+	fi
+
+	echo "Downloading The-Box-Oven $TAG. . ."
+
+	git clone \
+		-b "$TAG" --depth 1 \
+		"$SOURCE" \
+		"$HOME/theboxoven" \
+		< /dev/null 2> /dev/null
+
+	echo
+fi
+
+# Change directory to it.
+cd "$HOME/theboxoven" || exit
+
+# Update it.
+if [ "$TAG" != "$(git describe --always)" ]; then
+	echo "Updating The-Box-Oven to $TAG . . ."
+	git fetch --depth 1 --force --prune origin tag "$TAG"
+	if ! git checkout -q "$TAG"; then
+		echo "Update failed. Did you modify something in $PWD?"
+		exit 1
+	fi
+	echo
+fi
+
+# Start setup script.
+setup/start.sh
