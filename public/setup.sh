@@ -92,6 +92,10 @@ fi
 # Change directory to it.
 cd "$HOME/theboxoven" || exit
 
+echo "Current directory: $(pwd)"
+echo "Contents:"
+ls -l
+
 # Update it.
 if [ "$TAG" != "$(git describe --always)" ]; then
 	echo "Updating The-Box-Oven to $TAG . . ."
